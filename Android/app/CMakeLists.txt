@@ -13,8 +13,6 @@ cmake_minimum_required(VERSION 3.4.1)
 file(GLOB_RECURSE CoreSrc
         "${CORELIB_SRC_PATH}/*.cpp"
         "${CORELIB_SRC_PATH}/*.c"
-        "${CORELIB_FRAMEWORKS_PATH}/*.cpp"
-        "${CORELIB_FRAMEWORKS_PATH}/*.c"
         "src/main/cpp/*.cpp"
         "src/main/cpp/*.c"
 )
