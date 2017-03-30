@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 def coreLibSrcPath = "${rootProject.projectDir.getParentFile().absolutePath}/Src"
+def frameworksPath = "${rootProject.projectDir.getParentFile().absolutePath}/Frameworks"
 
 android {
     compileSdkVersion 25
@@ -15,7 +16,8 @@ android {
             cmake {
                 cppFlags "-std=c++11 -frtti -fexceptions"
                 arguments "-DANDROID_TOOLCHAIN=clang", "-DANDROID_STL=c++_shared",
-                        "-DCORELIB_SRC_PATH=${coreLibSrcPath}"
+                        "-DCORELIB_SRC_PATH=${coreLibSrcPath}",
+                        "-DFRAMEWORKS_PATH=${frameworksPath}"
             }
         }
     }
